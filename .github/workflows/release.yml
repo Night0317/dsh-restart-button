@@ -28,7 +28,6 @@ jobs:
           cp package.json index.js client.js restart-helper.js cordis.patch.yml README.md README.zh-CN.md LICENSE dist/dsh-restart-button/
           cp INSTALL.zh-CN.md dist/安装说明.md
           npm pack --pack-destination dist
-          cp dist/dsh-restart-button-1.0.0.tgz dist/dsh-restart-button/
           cd dist
           zip -r dsh-restart-button-1.0.0.zip dsh-restart-button 安装说明.md dsh-restart-button-1.0.0.tgz
       - name: Upload release assets
