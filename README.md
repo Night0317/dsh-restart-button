@@ -10,8 +10,9 @@ Harness sidebar footer.
 - Installed as a profile plugin: it does **not** patch `app.asar` or the DSH
   installation.
 
-> GitHub: <https://github.com/Night0317/dsh-restart-button> 鈥?download the zip or
-> tgz from Releases.
+> GitHub: <https://github.com/Night0317/dsh-restart-button> — install from
+> Code → Download ZIP, or build a tgz with `pnpm pack`. See Releases for version
+> notes.
 
 ## Requirements
 
@@ -22,11 +23,12 @@ Harness sidebar footer.
 
 1. Unzip the plugin folder somewhere permanent (for example
    `C:\dsh-plugins\dsh-restart-button`).
-2. DSH 鈫?Settings 鈫?Plugins 鈫?Install third-party plugin 鈫?paste the absolute
-   path of the plugin folder 鈫?install and enable.
+2. DSH → Settings → Plugins → Install third-party plugin → paste the absolute
+   path of the plugin folder → install and enable.
 3. **Fully quit DSH** (including the tray icon) and reopen it.
 
-A single-file alternative is the bundled `dsh-restart-button-1.0.0.tgz`: keep it
+A single-file alternative: the packaged zip from the project archive includes a
+`dsh-restart-button-1.0.0.tgz` (or build one with `pnpm pack`). Keep the tgz
 somewhere permanent and paste its absolute path in step 2 instead.
 
 > Keep the install source either way. A folder install is referenced through a
@@ -40,7 +42,7 @@ somewhere permanent and paste its absolute path in step 2 instead.
 - Host half: `index.js` (local `webServer` routes + `connection` admission)
 - Client half: `client.js` (the `sidebar.footer.action` slot)
 - Relaunch helper: `restart-helper.js`
-- Tests: `node --test tests/` (Node 鈮?22)
+- Tests: `node --test tests/` (Node ≥ 22)
 - Package: `pnpm pack`; release assets are `dsh-restart-button-1.0.0.tgz` and a zip
 
 ## How it works
