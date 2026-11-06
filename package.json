@@ -1,7 +1,7 @@
 {
   "name": "dsh-restart-button",
   "version": "1.0.0",
-  "description": "Adds a Restart DSH button above the account entry in the sidebar footer.",
+  "description": "在 DeepSeek Harness 桌面版侧边栏账户行上方添加「重启 DSH」按钮（Windows，免改 app.asar）。",
   "type": "module",
   "main": "./index.js",
   "exports": {
