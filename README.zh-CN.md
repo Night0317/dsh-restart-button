@@ -1,40 +1,69 @@
 # dsh-restart-button
 
-鍦?DeepSeek Harness 渚ц竟鏍忓簳閮ㄣ€佺敤鎴峰悕锛堣处鎴疯锛夋涓婃柟娣诲姞涓€涓€岄噸鍚?DSH銆嶆寜閽€?
-- 鐐瑰嚮涓€娆¤繘鍏ョ‘璁ゆ€侊紙銆屽啀娆＄偣鍑婚噸鍚€嶏級锛? 绉掑悗鑷姩鍙栨秷銆?- 鍐嶆鐐瑰嚮锛氭暣涓?DSH 搴旂敤閫€鍑哄苟鑷姩閲嶆柊鎵撳紑锛屼細璇濊褰曚繚鐣欍€?- 鏍峰紡璺熼殢鍘熺敓渚ц竟鏍忚锛?6px 楂樸€佸悓鏍风殑 hover/focus token銆佹槑鏆椾富棰樸€佹姌鍙犳垚鍥炬爣锛夈€?- 涓嶄慨鏀?`app.asar` 鎴?DSH 瀹夎鐩綍锛屽彧浣滀负鎻掍欢瀹夎鍦ㄥ綋鍓?profile 涓€?
-> GitHub 浠撳簱锛?https://github.com/Night0317/dsh-restart-button>锛堝畨瑁呭寘瑙?Releases锛?
-## 鍏煎鎬?
-- DSH Desktop **0.2.2-rc.1**锛堟垨鍏煎鐨?0.2.x锛夛紝**Windows x64**銆?- 鍙湪妗岄潰搴旂敤绐楀彛閲屾樉绀猴紱`dsh web` / 鏅€氭祻瑙堝櫒鏍囩涓嶄細鏄剧ず銆?- 鍏朵粬骞冲彴浼氶殣钘忔寜閽紝閬垮厤缁欏嚭鏃犳硶鍏戠幇鐨勬搷浣溿€?
-## 瀹夎
+在 DeepSeek Harness 侧边栏底部、用户名（账户行）正上方添加一个「重启 DSH」按钮。
 
-瀹屾暣姝ラ瑙?`INSTALL.zh-CN.md`锛坺ip 閲屾槸 `瀹夎璇存槑.md`锛夈€傛牳蹇冩楠わ細
+- 点击一次进入确认态（「再次点击重启」），4 秒后自动取消。
+- 再次点击：整个 DSH 应用退出并自动重新打开，会话记录保留。
+- 样式跟随原生侧边栏行（36px 高、同样的 hover/focus token、明暗主题、折叠成图标）。
+- 不修改 `app.asar` 或 DSH 安装目录，只作为插件安装在当前 profile 中。
 
-1. 鎶婃彃浠舵枃浠跺す瑙ｅ帇鍒颁竴涓暱鏈熶繚鐣欑殑浣嶇疆锛堜緥濡?`C:\dsh-plugins\dsh-restart-button`锛夈€?2. DSH 鈫?璁剧疆 鈫?鎻掍欢 鈫?瀹夎绗笁鏂规彃浠?鈫?鍦ㄣ€屽寘鍚嶆垨鍦板潃銆嶉噷濉?*鎻掍欢鏂囦欢澶圭殑缁濆璺緞** 鈫?瀹夎 鈫?绔嬪嵆鍚敤銆?3. **瀹屽叏閫€鍑?DSH**锛堝寘鍚墭鐩橀噷鐨?DSH锛夊苟閲嶆柊鎵撳紑銆?
-濡傛灉鏇村枩娆㈠崟鏂囦欢鏂瑰紡锛氭妸闅忓寘鐨?`dsh-restart-button-1.0.0.tgz` 鏀惧湪绋冲畾浣嶇疆锛屽湪绗?2 姝ュ～杩欎釜 tgz 鐨勭粷瀵硅矾寰勫嵆鍙€?
-> 涓ょ鏂瑰紡閮借淇濈暀瀹夎婧愶細鐢ㄦ枃浠跺す瀹夎鏃?DSH 閫氳繃鐩綍閾炬帴寮曠敤瀹冿紝绉诲姩/鍒犻櫎鍚庢寜閽細娑堝け锛堟斁鍥炲師璺緞鍙仮澶嶏級锛涚敤 tgz 瀹夎鏃?tgz 涔熻淇濈暀锛屽惁鍒欎互鍚庡湪 profile 閲屽畨瑁?鏇存柊鍏朵粬鎻掍欢浼氬洜鎵句笉鍒?tgz 鑰屽け璐ャ€傝缁嗗姣旇 `INSTALL.zh-CN.md`銆?
-## 寮€鍙?
-- 瀹夸富鍗婏細`index.js`锛坄webServer` 璺敱 + `connection` 閴存潈锛?- 瀹㈡埛绔崐锛歚client.js`锛坄sidebar.footer.action` 妲戒綅锛?- 閲嶅惎杈呭姪锛歚restart-helper.js`锛堢瓑涓や釜 DSH 杩涚▼閫€鍑哄悗閲嶆柊鎷夎捣锛?- 娴嬭瘯锛歚node --test tests/`锛圢ode 鈮?22锛?- 鎵撳寘锛歚pnpm pack`锛涘彂甯冭祫浜т负 `dsh-restart-button-1.0.0.tgz` 涓?zip
+> GitHub 仓库：<https://github.com/Night0317/dsh-restart-button>（安装：Code → Download ZIP；版本记录见 Releases）
 
-## 浣跨敤
+## 兼容性
 
-鎸夐挳浣嶄簬宸︿晶杈规爮鏈€涓嬫柟銆佽处鎴疯涓婃柟锛?
-1. 绗竴娆＄偣鍑伙細鏂囧瓧鍙樹负銆屽啀娆＄偣鍑婚噸鍚€嶃€?2. 绗簩娆＄偣鍑伙細鏄剧ず銆屾鍦ㄩ噸鍚€︺€嶏紝搴旂敤閫€鍑哄苟鑷姩閲嶆柊鍚姩銆?3. 閲嶅惎鏈熼棿杩涜涓殑浠诲姟浼氳涓柇锛涗細璇濊褰曞凡鎸佷箙鍖栵紝閲嶅紑鍚庡彲浠ョ户缁€?
-## 鍗歌浇
+- DSH Desktop **0.2.2-rc.1**（或兼容的 0.2.x），**Windows x64**。
+- 只在桌面应用窗口里显示；`dsh web` / 普通浏览器标签不会显示。
+- 其他平台会隐藏按钮，避免给出无法兑现的操作。
 
-DSH 鈫?璁剧疆 鈫?鎻掍欢 鈫?宸插畨瑁?鈫?鎵惧埌 `dsh-restart-button` 鈫?鍗歌浇锛岀劧鍚庨噸鍚?DSH锛涙渶鍚庡彲浠ュ垹闄ゆ彃浠舵枃浠跺す銆?
-## 宸ヤ綔鍘熺悊
+## 安装
 
-妗岄潰鐗堟妸 Web 鐣岄潰鏀惧湪 Electron 涓昏繘绋嬮噷锛屾櫘閫氶〉闈㈡棤娉曡皟鐢?`app.relaunch()`銆傛彃浠跺洜姝ゅ垎涓ゅ崐锛?
-1. **瀹㈡埛绔?*锛氬湪 `sidebar.footer.action` 妲戒綅娓叉煋鎸夐挳锛涚偣鍑诲悗璇锋眰瀹夸富鍗婄殑鏈湴璺敱銆?2. **瀹夸富鍗?*锛氭敞鍐?`/dsh-restart-button/status` 涓?`/dsh-restart-button/restart`锛屽惎鍔ㄤ竴涓?detached 鐨?Node helper 鍚庡仠姝?Electron 涓昏繘绋嬶紱helper 绛変富杩涚▼鍜?Host 閮介€€鍑猴紝鍐嶆媺璧?`DeepSeek Harness.exe`銆?
-璺敱鍙洃鍚湰鏈哄洖鐜湴鍧€锛屽苟閫氳繃 DSH 鑷甫鐨?`connection` 鏈嶅姟鏍￠獙 Host/Origin 涓庢祻瑙堝櫒鐧诲綍 Cookie锛涜法绔欐垨鏈櫥褰曡姹傝繑鍥?401/403銆傛彃浠朵笉鍚换浣曠綉缁滆姹傛垨鏁版嵁涓婃姤銆俬elper 鐨勬棩蹇楀啓鍦?`%TEMP%\dsh-restart-button.log`銆?
-## 鏁呴殰鎺掓煡
+完整步骤见 `INSTALL.zh-CN.md`（zip 里是 `安装说明.md`）。核心步骤：
 
-| 鐜拌薄 | 澶勭悊 |
+1. 把插件文件夹解压到一个长期保留的位置（例如 `C:\dsh-plugins\dsh-restart-button`）。
+2. DSH → 设置 → 插件 → 安装第三方插件 → 在「包名或地址」里填**插件文件夹的绝对路径** → 安装 → 立即启用。
+3. **完全退出 DSH**（包含托盘里的 DSH）并重新打开。
+
+如果使用打包好的压缩包，里面还有 `dsh-restart-button-1.0.0.tgz`；也可以自己运行 `pnpm pack` 生成。把 tgz 放在稳定位置，在第 2 步填这个 tgz 的绝对路径即可。
+
+> 两种方式都要保留安装源：用文件夹安装时 DSH 通过目录链接引用它，移动/删除后按钮会消失（放回原路径可恢复）；用 tgz 安装时 tgz 也要保留，否则以后在 profile 里安装/更新其他插件会因找不到 tgz 而失败。详细对比见 `INSTALL.zh-CN.md`。
+
+## 开发
+
+- 宿主半：`index.js`（`webServer` 路由 + `connection` 鉴权）
+- 客户端半：`client.js`（`sidebar.footer.action` 槽位）
+- 重启辅助：`restart-helper.js`（等两个 DSH 进程退出后重新拉起）
+- 测试：`node --test tests/`（Node ≥ 22）
+- 打包：`pnpm pack`；发布资产为 `dsh-restart-button-1.0.0.tgz` 与 zip
+
+## 使用
+
+按钮位于左侧边栏最下方、账户行上方：
+
+1. 第一次点击：文字变为「再次点击重启」。
+2. 第二次点击：显示「正在重启…」，应用退出并自动重新启动。
+3. 重启期间进行中的任务会被中断；会话记录已持久化，重开后可以继续。
+
+## 卸载
+
+DSH → 设置 → 插件 → 已安装 → 找到 `dsh-restart-button` → 卸载，然后重启 DSH；最后可以删除插件文件夹。
+
+## 工作原理
+
+桌面版把 Web 界面放在 Electron 主进程里，普通页面无法调用 `app.relaunch()`。插件因此分两半：
+
+1. **客户端**：在 `sidebar.footer.action` 槽位渲染按钮；点击后请求宿主半的本地路由。
+2. **宿主半**：注册 `/dsh-restart-button/status` 与 `/dsh-restart-button/restart`，启动一个 detached 的 Node helper 后停止 Electron 主进程；helper 等主进程和 Host 都退出，再拉起 `DeepSeek Harness.exe`。
+
+路由只监听本机回环地址，并通过 DSH 自带的 `connection` 服务校验 Host/Origin 与浏览器登录 Cookie；跨站或未登录请求返回 401/403。插件不含任何网络请求或数据上报。helper 的日志写在 `%TEMP%\dsh-restart-button.log`。
+
+## 故障排查
+
+| 现象 | 处理 |
 | --- | --- |
-| 鎸夐挳涓嶆樉绀?| 纭鏄闈㈠簲鐢ㄧ獥鍙ｃ€丏SH 鈮?0.2.2-rc.1銆佹彃浠跺凡鍚敤锛涘畨瑁呭悗闇€瑕佸畬鍏ㄩ€€鍑哄苟閲嶅紑涓€娆?|
-| 鐐瑰嚮鍚庢病鍙嶅簲 | 鏌ョ湅 `%TEMP%\dsh-restart-button.log`锛涚‘璁?DSH 鏄闈㈢増鑰岄潪 `dsh web` |
-| 鎻愮ず銆岄噸鍚け璐ャ€?| 鎵嬪姩閫€鍑哄苟閲嶆柊鎵撳紑 DSH锛涜嫢鍙嶅澶辫触锛屾妸鏃ュ織鍙戠粰鎻掍欢浣滆€?|
-| 瀹夎鏃舵彁绀烘棤娉曡瘑鍒矾寰?| 浣跨敤鏂囦欢澶圭殑**缁濆璺緞**锛屽苟纭鏂囦欢澶归噷鏈?`package.json` |
+| 按钮不显示 | 确认是桌面应用窗口、DSH ≥ 0.2.2-rc.1、插件已启用；安装后需要完全退出并重开一次 |
+| 点击后没反应 | 查看 `%TEMP%\dsh-restart-button.log`；确认 DSH 是桌面版而非 `dsh web` |
+| 提示「重启失败」 | 手动退出并重新打开 DSH；若反复失败，把日志发给插件作者 |
+| 安装时提示无法识别路径 | 使用文件夹的**绝对路径**，并确认文件夹里有 `package.json` |
 
 ## License
 
